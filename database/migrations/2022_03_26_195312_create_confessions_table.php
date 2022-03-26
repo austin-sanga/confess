@@ -14,7 +14,7 @@ class CreateConfessionsTable extends Migration
     public function up()
     {
         Schema::create('confessions', function (Blueprint $table) {
-            $table->increaments("id");
+            $table->increments("id");
             $table->string('confession');
             $table->timestamps();
         });

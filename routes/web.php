@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\publishconfess;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 // this is the route to the first hero page
 Route::view('/', 'hero');
+Route::post('published',[publishconfess::class,'publish']);

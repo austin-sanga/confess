@@ -12,9 +12,9 @@
 
     {{-- this is how you display the validation error --}}
     @error('confession')
-    {{ $message }}
+    {{ $message = "Please do fill in your confession" }}
     @enderror
-    
+
 {{-- the action comes from the route of the controller for the form to pass through --}}
 <form action="published" method="POST" >
     @csrf

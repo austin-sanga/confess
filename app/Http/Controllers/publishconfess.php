@@ -10,6 +10,10 @@ class publishconfess extends Controller
     //so this is the function on saving the unregistered users confessions
     function publish(Request $req)
     {
+        $req->validate([
+            'confession'=>'required'
+        ]);
+
         $confession = new confession;
         $confession -> confession = $req -> confession;
         $confession -> save();
@@ -23,6 +27,5 @@ class publishconfess extends Controller
         // here it redirects the redirects user to the hero page
         return redirect('/');
     }
-
 
 }

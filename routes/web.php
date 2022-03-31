@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\publishconfess;
+use App\Http\Controllers\unconfessions;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,11 @@ use App\Http\Controllers\publishconfess;
 
 // this is the route to the first hero page
 Route::view('/', 'hero');
+
+// route to the publishing controller, 
+// the one that deals with insertion of data in the database
 Route::post('published',[publishconfess::class,'publish']);
+
+// controller route of the uconfessions
+// to which it will later pass the view to show the unconfessions view
+Route::get('confessions',[unconfessions::class,'show']);

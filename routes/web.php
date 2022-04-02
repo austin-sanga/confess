@@ -47,3 +47,5 @@ Route::view('adminlogin','adminlogin');
 // Route for the adminAuth function via the admis controller
 // this route currently has no progress on hault
 Route::get('logedin',[adminController::class,'adminAuth']);
+
+// auth...

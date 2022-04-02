@@ -1,0 +1,15 @@
+<?php
+
+// this is the models for the admins table
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class admin extends Model
+{
+    use HasFactory;
+    // this below is the tables primary key
+    protected $primaryKey = ("adminname");
+}

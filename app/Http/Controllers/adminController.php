@@ -12,6 +12,14 @@ class adminController extends Controller
     // we use request type because its responsible with taking data from use
     function register(Request $req)
     {
+        // this is to validate that the user fills in the fields
+        // an array of what to validate is passed through
+        $req->validate([
+            'adminname'=>'required',
+            'email'=>'required',
+            'password'=>'required'
+        ]);
+
          //This declares use of the model to be in relation
         //Inaitwa kudefine instance of it
         $admin = new admin;

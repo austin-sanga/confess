@@ -1,4 +1,20 @@
 <h1>Admin Registration</h1>
+
+ {{-- span to show errors by the user  --}}
+ <span style="color: red">
+    {{-- then we do declare on errors to be shown --}}
+    {{-- each error has been listed on its own on the same span --}}
+    @error('adminname')
+       {{ $message }} 
+    @enderror<br>
+    @error('email')
+       {{ $message }} 
+    @enderror<br>
+    @error('password')
+       {{ $message }} 
+    @enderror
+</span>
+
 <form action="adminregister" method="POST">
     @csrf
     <input type="text" name="adminname" placeholder="fill admin username"><br><br>

@@ -48,4 +48,3 @@ Route::view('adminlogin','adminlogin');
 // this route currently has no progress on hault
 Route::get('logedin',[adminController::class,'adminAuth']);
 
-// auth...

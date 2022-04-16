@@ -12,3 +12,5 @@
     <input type="password" name="password" placeholder="fill in password"><br><br>
     <button type="submit">Login</button>
 </form>
+
+<span>You don't have an account <a href="/adminreg">register now</a></span>

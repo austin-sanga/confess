@@ -22,3 +22,5 @@
     <input type="password" name="password" placeholder="fill password"><br><br>
     <button type="submit">Register</button>
 </form>
+
+<span>You Already have an account <a href="/adminreg">Login</a></span>

@@ -1,9 +1,14 @@
 <h1>Admin Login</h1>
 
+{{-- passing any login errors --}}
+@error('adminname')
+    {{ $message }}
+@enderror
+
 {{-- linked to the adminAuth which is currently on  hault --}}
-<form action="logedin" method="GET">
+<form action="/login" method="POST">
     @csrf
-    <input type="text" name="addminname" placeholder="fill your admin name"><br><br>
+    <input type="text" name="adminname" placeholder="fill your admin name"><br><br>
     <input type="password" name="password" placeholder="fill in password"><br><br>
     <button type="submit">Login</button>
 </form>

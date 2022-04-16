@@ -44,7 +44,7 @@ Route::view('adminreg','adminreg');
 // view for the admin login area
 Route::view('adminlogin','adminlogin');
 
-// Route for the adminAuth function via the admis controller
-// this route currently has no progress on hault
-Route::get('logedin',[adminController::class,'adminAuth']);
+// Route for the login function via the admins controller
+// 
+Route::post('/login',[adminController::class,'login']);
 

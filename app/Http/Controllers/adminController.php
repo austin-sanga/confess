@@ -71,5 +71,17 @@ class adminController extends Controller
         ])->onlyInput('adminname');
         
     }
+
+    // logout function
+    function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/adminlogin');
+    }
     
 }

@@ -2,6 +2,9 @@
 
 {{-- this view is passed via the unconfessions controller --}}
 
+{{-- logout  --}}
+<a href="/logout">logout</a><br><br>
+
 {{-- table to show the confessions --}}
 <table border="1">
 

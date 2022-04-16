@@ -45,6 +45,8 @@ Route::view('adminreg','adminreg');
 Route::view('adminlogin','adminlogin');
 
 // Route for the login function via the admins controller
-// 
 Route::post('/login',[adminController::class,'login']);
+
+// logout function being passed
+Route::get('/logout',[adminController::class,'logout']);
 

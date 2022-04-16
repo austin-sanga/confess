@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\admin;
 
+
 class adminController extends Controller
 {
     //this is a controller for the admins 
@@ -46,22 +47,23 @@ class adminController extends Controller
     // creating a login function
     // checkinhg on user authentification
     // this is authentification phase on hault
-    function login(Request $req)
+    function login(Request $request)
     {
 
         // passing on the validation of the login details
         // And passing them onto another variable
-       $credential =  $req->validate([
-            'adminname'=>['required', 'adminname'],
-            'password'=>['required']
+       $credentials =  $request->validate([
+            'adminname' => ['required'],
+            'password' => ['required'],
         ]);
 
         // checking match of the filled data with the database
         if (Auth::attempt($credentials))
         {
-            $req->session()->regenerate();
+            $request->session()->regenerate();
 
-            return redirect()->intended('unconfessions');
+            // i passed the route of a controller to view confessions to a view
+            return redirect()->intended('confession'); 
         }
 
         return back()->withErrors([

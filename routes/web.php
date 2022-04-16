@@ -33,7 +33,7 @@ Route::post('published',[publishconfess::class,'publish']);
 
 // controller route of the uconfessions
 // to which it will later pass the view to show the unconfessions view
-Route::get('confessions',[unconfessions::class,'show']);
+Route::get('confession',[unconfessions::class,'show']);
 
 // Route for the admins controller
 Route::post('adminregister',[adminController::class,"register"]);

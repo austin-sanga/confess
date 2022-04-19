@@ -37,26 +37,28 @@ Route::post('published',[publishconfess::class,'publish']);
 // to which it will later pass the view to show the unconfessions view
 Route::get('confession',[unconfessions::class,'show']);
 
-// Route for the admins controller
-Route::post('adminregister',[adminController::class,"register"]);
-
 // view to the admin registration
 Route::view('adminreg','adminreg');
 
 // view for the admin login area
+// dont use redirect to restrict access mention view
 Route::get('/adminlogin',function(){
     if (session()->has('adminname'))
     {
         return redirect('confession');
     }
-    return redirect('adminlogin');
+    return view('/adminlogin');
 });
 
-// Route for the login function via the admins controller
-Route::post('/login',[adminController::class,'login']);
+// // Route for the login function via the admins controller
+// Route::post('/login',[adminController::class,'login']);
 
-// logout function being passed
-Route::get('/logout',[adminController::class,'logout']);
+// // logout function being passed
+// Route::get('/logout',[adminController::class,'logout']);
 
+Route::controller(adminController::class)->group(function () {
+    Route::post('/login', 'login');
+    Route::get('/logout', 'logout');
+});
 
 

@@ -56,6 +56,8 @@ Route::get('/adminlogin',function(){
 // // logout function being passed
 // Route::get('/logout',[adminController::class,'logout']);
 
+
+// Routes passing the same controller can be passed in a group at once
 Route::controller(adminController::class)->group(function () {
     Route::post('/login', 'login');
     Route::get('/logout', 'logout');

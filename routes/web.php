@@ -8,7 +8,7 @@ use App\Http\Controllers\unconfessions;
 // controllers for admin
 use App\Http\Controllers\adminController;
 
-use Illuminate\Support\Facades\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +45,10 @@ Route::view('adminreg','adminreg');
 Route::get('/adminlogin',function(){
     if (session()->has('adminname'))
     {
-        return redirect('confession');
+        return view('/');
     }
     return view('/adminlogin');
+    
 });
 
 // // Route for the login function via the admins controller
@@ -61,6 +62,7 @@ Route::get('/adminlogin',function(){
 Route::controller(adminController::class)->group(function () {
     Route::post('/login', 'login');
     Route::get('/logout', 'logout');
-});
+    Route::post('/adminregister','register');
+});  
 
 

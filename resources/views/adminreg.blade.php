@@ -15,7 +15,7 @@
     @enderror
 </span>
 
-<form action="adminregister" method="POST">
+<form action="/adminregister" method="POST">
     @csrf
     <input type="text" name="adminname" placeholder="fill admin username"><br><br>
     <input type="email" name="email" placeholder="fill in your email"><br><br>

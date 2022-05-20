@@ -29,3 +29,8 @@ class publishconfess extends Controller
     }
 
 }
+
+/* 
+Look on to twiiter developer
+on postman
+*/

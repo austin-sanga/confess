@@ -3,22 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Abraham\TwitterOAuth\TwitterOAuth;
+use Atymic\Twitter\Twitter as TwitterContract;
+use Illuminate\Http\JsonResponse;
+use Twitter;
+
 
 class mediacontroller extends Controller
 {
-    //
-    public function connect_twitter(Request $req)
-    {
 
-        $callback = '';
+/*     public function userTweets(int $userId): JsonResponse
+{
+	$params = [
+		'place.fields' => 'country,name',
+		'tweet.fields' => 'author_id,geo',
+		'expansions' => 'author_id,in_reply_to_user_id',
+		TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
+	];
 
-       /*  Carrying consumer key and secret */
-        $_twitter_connect = new TwitterOAuth('Yq5LHcGjERjX6hCABvbAc4RrlX','EEsIBLGuHqgYl6Tz45XVuhwvNlNObCLZ2vNd0tEIDIuAbq5NSlH');
+	return JsonResponse::fromJsonString(Twitter::userTweets($userId, $params));
+} */
 
-        /* Access token  */
-        $_access_token = $_twitter_connect->oauth('oauth/request_token',['oauth_callback'=>$callback]);
-
-        $_route = $_twitter_connect->url('oauth/authorize',['oauth_token'=>$_access_token['oauth_token']]);
-    }
+function userTweets(){
+    $x= getTweet(1529558135723245570);
 }
+
+}
+
+
+

@@ -7,6 +7,8 @@ use App\Http\Controllers\publishconfess;
 use App\Http\Controllers\unconfessions;
 // controllers for admin
 use App\Http\Controllers\adminController;
+// test tweet
+use App\Http\Controllers\mediacontroller;
 
 
 
@@ -29,7 +31,7 @@ use App\Http\Controllers\adminController;
 // this is the route to the first hero page
 Route::view('/', 'hero');
 
-// route to the publishing controller, 
+// route to the publishing controller,
 // the one that deals with insertion of data in the database
 Route::post('published',[publishconfess::class,'publish']);
 
@@ -48,7 +50,7 @@ Route::get('/adminlogin',function(){
         return view('/');
     }
     return view('/adminlogin');
-    
+
 });
 
 // // Route for the login function via the admins controller
@@ -63,6 +65,8 @@ Route::controller(adminController::class)->group(function () {
     Route::post('/login', 'login');
     Route::get('/logout', 'logout');
     Route::post('/adminregister','register');
-});  
+});
+
+Route::get('media',[mediacontroller::class,'userTweets']);
 
 

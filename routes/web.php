@@ -29,7 +29,7 @@ use App\Http\Controllers\mediacontroller;
 
 
 // this is the route to the first hero page
-Route::view('/', 'hero');
+Route::view('/', 'index');
 
 // route to the publishing controller,
 // the one that deals with insertion of data in the database

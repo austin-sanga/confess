@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Atymic\Twitter\Twitter as TwitterContract;
 use Illuminate\Http\JsonResponse;
-use Twitter;
+use Atymic\Twitter\Facade\Twitter;
 
 
 class mediacontroller extends Controller

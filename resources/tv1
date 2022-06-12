@@ -26,3 +26,4 @@ ssh in pc demand: cat /home/austin/.ssh/id_rsa.pub
 ssh check: ls ~/.ssh/id_*
 
 
+

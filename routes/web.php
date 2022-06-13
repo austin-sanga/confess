@@ -70,3 +70,7 @@ Route::controller(adminController::class)->group(function () {
 Route::get('media',[mediacontroller::class,'userTweets']);
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

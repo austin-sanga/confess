@@ -18,6 +18,6 @@
 {{-- the action comes from the route of the controller for the form to pass through --}}
 <form action="published" method="POST" >
     @csrf
-    <input type="text" name="confession" placeholder="Confess here.....">
+    <input type="text" name="confession" placeholder="whats on your mind.....">
     <button type="submit">publish</button>
 </form>

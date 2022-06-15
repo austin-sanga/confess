@@ -1,6 +1,6 @@
 {{-- This is the first page a user lands into and confess their thoughts --}}
 
-<h1>Confession page</h1>
+<h1>Whats on your mind</h1>
 
 {{-- so here is how a session is implied to send verification to user that data is uploaded --}}
 @if (session('confession'))

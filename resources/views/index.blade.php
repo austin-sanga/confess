@@ -5,6 +5,8 @@
 
 @section('content')
 
+{{-- this div centers the staffs --}}
+<div class="container my-5">
 <h1 class=" text-center">Whats on your mind ?</h1>
 
 {{-- so here is how a session is implied to send verification to user that data is uploaded --}}
@@ -68,7 +70,7 @@
     </div> --}}
   </div>
 </div>
-
+</div>
 
 
 @stop

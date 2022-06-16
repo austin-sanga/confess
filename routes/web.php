@@ -36,7 +36,7 @@ Route::view('/', 'index');
 // the one that deals with insertion of data in the database
 Route::post('published',[publishconfess::class,'publish']);
 
-// controller route of the uconfessions
+// controller route of the unconfessions
 // to which it will later pass the view to show the unconfessions view
 Route::get('confession',[unconfessions::class,'show']);
 

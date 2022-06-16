@@ -11,7 +11,7 @@
 
 {{-- so here is how a session is implied to send verification to user that data is uploaded --}}
 @if (session('confession'))
-    <h3 style="color: green" class=" text-center">confession received</h3>
+    <h3 style="color: green" class=" text-center">Thoughts received</h3>
 @endif
 
 {{-- span to show the error message on blank publishing --}}
@@ -19,7 +19,7 @@
 
     {{-- this is how you display the validation error --}}
     @error('confession')
-    {{ $message = "Please do fill in your confession" }}
+    {{ $message = "Please do fill in whats in your mind" }}
     @enderror
 </span>
 {{-- the action comes from the route of the controller for the form to pass through --}}

@@ -25,9 +25,15 @@
 {{-- the action comes from the route of the controller for the form to pass through --}}
 <form action="published" method="POST" class=" text-center">
     @csrf
-    <input type="text" name="confession" placeholder="whats on your mind.....">
-    <button type="submit">publish</button>
+    {{-- <input type="text" name="confession" placeholder="whats on your mind.....">
+    <button type="submit">publish</button> --}}
+    <div class="mb-3 ps-5 pe-5 " style="align-content: center, width:40%" >
+        <textarea class="form-control mb-2 " id="confession" name="confession" rows="2" ></textarea>
+        <button type="submit" class="btn btn-primary mb-2">Publish Thoughts</button>
+      </div>
+
 </form>
+
 
 <div class="mx-auto" style="width: 400px;">
 <div class="accordion" id="accordionExample">
@@ -39,7 +45,7 @@
       </h2>
       <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          <strong>Get a short description</strong> Here we expect you to share whats on your mind, maybe it a confession or some stuff you reaaly need to share and remain anonymous to the public
+          <strong>Get a short description</strong> Here we expect you to share whats on your mind, maybe it a confession or some stuff you really need to share and remain anonymous to the public
         </div>
       </div>
     </div>
@@ -74,3 +80,6 @@
 
 
 @stop
+
+
+

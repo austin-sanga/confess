@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- this div centers the staffs --}}
-<div class="container my-5">
+<div class="container my-5 border border-primary p-5 border-3" >
 <h1 class=" text-center">Whats on your mind ?</h1>
 
 {{-- so here is how a session is implied to send verification to user that data is uploaded --}}
@@ -28,7 +28,7 @@
     {{-- <input type="text" name="confession" placeholder="whats on your mind.....">
     <button type="submit">publish</button> --}}
     <div class="mb-3 ps-5 pe-5 " style="align-content: center, width:40%" >
-        <textarea class="form-control mb-2 " id="confession" name="confession" rows="2" ></textarea>
+        <textarea class="form-control mb-2 " id="confession" name="confession" rows="2" placeholder="write your thoughts here ....." ></textarea>
         <button type="submit" class="btn btn-primary mb-2">Publish Thoughts</button>
       </div>
 

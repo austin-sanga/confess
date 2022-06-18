@@ -6,7 +6,7 @@
 @section('content')
 
 {{-- this div centers the staffs --}}
-<div class="container my-5 border border-primary p-5 border-3" >
+<div class="container-lg my-5 border border-primary p-5 border-3" >
 <h1 class=" text-center">Whats on your mind ?</h1>
 
 {{-- so here is how a session is implied to send verification to user that data is uploaded --}}
@@ -22,17 +22,20 @@
     {{ $message = "Please do fill in whats in your mind" }}
     @enderror
 </span>
+
 {{-- the action comes from the route of the controller for the form to pass through --}}
-<form action="published" method="POST" class=" text-center">
+<form action="published" method="POST">
     @csrf
     {{-- <input type="text" name="confession" placeholder="whats on your mind.....">
     <button type="submit">publish</button> --}}
-    <div class="mb-3 ps-5 pe-5 " style="align-content: center, width:40%" >
-        <textarea class="form-control mb-2 " id="confession" name="confession" rows="2" placeholder="write your thoughts here ....." ></textarea>
-        <button type="submit" class="btn btn-primary mb-2">Publish Thoughts</button>
+
+    <div class="mb-3 text-center  ms-5  "   >
+        <textarea class="form-control mb-2 " id="confession" name="confession" rows="3" maxlength="280" placeholder="write your thoughts here ..... max 280 characters" ></textarea>
+        <button type="submit" class="btn btn-primary mb-2 ">Publish Thoughts</button>
       </div>
 
 </form>
+
 
 
 <div class="mx-auto" style="width: 400px;">
@@ -77,7 +80,6 @@
   </div>
 </div>
 </div>
-
 
 @stop
 

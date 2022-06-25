@@ -70,7 +70,7 @@ Route::controller(adminController::class)->group(function () {
     Route::post('/adminregister','register');
 });
 
-Route::get('media/{userID}',[mediacontroller::class,'userTweets']);
+Route::get('media/{query}',[mediacontroller::class,'searchRecent']);
 
 
 

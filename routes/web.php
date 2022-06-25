@@ -10,6 +10,8 @@ use App\Http\Controllers\adminController;
 // test tweet
 use App\Http\Controllers\mediacontroller;
 
+use Atymic\Twitter\Facade\Twitter;
+
 
 
 
@@ -68,7 +70,9 @@ Route::controller(adminController::class)->group(function () {
     Route::post('/adminregister','register');
 });
 
-Route::get('media',[mediacontroller::class,'userTweets']);
+Route::get('media/{userID}',[mediacontroller::class,'userTweets']);
+
+
 
 
 

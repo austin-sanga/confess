@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Atymic\Twitter\Twitter as TwitterContract;
 use Illuminate\Http\JsonResponse;
-use Atymic\Twitter\Facade\Twitter;
+use Twitter;
 
 
 class mediacontroller extends Controller
 {
 
-/*     public function userTweets(int $userId): JsonResponse
+    public function userTweets(int $userId): JsonResponse
 {
 	$params = [
 		'place.fields' => 'country,name',
@@ -21,11 +21,9 @@ class mediacontroller extends Controller
 	];
 
 	return JsonResponse::fromJsonString(Twitter::userTweets($userId, $params));
-} */
-
-function userTweets(){
-    $x= getTweet(1529558135723245570);
 }
+
+
 
 }
 

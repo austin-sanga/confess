@@ -7,7 +7,7 @@ return [
 
     'api_url' => 'api.twitter.com',
     'upload_url' => 'upload.twitter.com',
-    'api_version' => env('TWITTER_API_VERSION', '1.1'),
+    'api_version' => env('TWITTER_API_VERSION', '2'),
 
     'consumer_key' => env('TWITTER_CONSUMER_KEY'),
     'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),

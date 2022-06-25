@@ -10,7 +10,6 @@ use Twitter;
 
 class mediacontroller extends Controller
 {
-
     public function userTweets(int $userId): JsonResponse
 {
 	$params = [
@@ -22,10 +21,12 @@ class mediacontroller extends Controller
 
 	return JsonResponse::fromJsonString(Twitter::userTweets($userId, $params));
 }
-
-
-
 }
+
+
+
+
+
 
 
 

@@ -139,6 +139,7 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
+        Atymic\Twitter\ServiceProvider\LaravelServiceProvider::class, /* added this part about twitter atymic */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -190,6 +191,7 @@ return [
 
     'aliases' => [
 
+        'Twitter'   => Atymic\Twitter\Facade\Twitter::class, /* this is added by twitter api extention */
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,

@@ -21,7 +21,7 @@ public function searchRecent(string $query): JsonResponse
         TwitterContract::KEY_RESPONSE_FORMAT => TwitterContract::RESPONSE_FORMAT_JSON,
     ];
 
-    return JsonResponse::fromJsonString(Twitter::searchRecent($query, $params));
+    return 0/* JsonResponse::fromJsonString(Twitter::searchRecent($query, $params)) */;
 
     $querier = \Atymic\Twitter\Facade\Twitter::forApiV2()
     ->getQuerier();

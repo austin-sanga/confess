@@ -21,6 +21,7 @@
         {{-- so the data within comes as a result of following the controller instructions --}}
         <td>{{ $item['id'] }}</td>
         <td>{{ $item['confession'] }}</td>
+        <td>{{ $item['created_at'] }}</td>
     </tr>
     @endforeach
 </table>

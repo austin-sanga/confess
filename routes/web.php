@@ -10,6 +10,9 @@ use App\Http\Controllers\adminController;
 // test tweet
 use App\Http\Controllers\mediacontroller;
 
+// test link & dont produce
+use App\Http\Controllers\testcontroller;
+
 use Atymic\Twitter\Facade\Twitter;
 
 
@@ -71,6 +74,9 @@ Route::controller(adminController::class)->group(function () {
 });
 
 Route::get('media/{query}',[mediacontroller::class,'searchRecent']);
+
+//test controller route
+Route::get("test",[testcontroller::class,'test']);
 
 
 

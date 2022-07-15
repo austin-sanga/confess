@@ -12,6 +12,7 @@ class unconfessions extends Controller
     {
         $data = confession::all();
         return view('unconfessions',['confession'=>$data]);
-        
+
     }
 }
+

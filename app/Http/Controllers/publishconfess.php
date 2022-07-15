@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\confession;
+use Illuminate\Support\Str;
 
 class publishconfess extends Controller
 {
@@ -13,6 +14,13 @@ class publishconfess extends Controller
         $req->validate([
             'confession'=>'required'
         ]);
+
+        // this is to catch a bad phrase from a spammer and stop it
+        $contains = Str::contains($req, 'https');
+        if($contains==1){
+            return view('index');
+        }else
+
 
         $confession = new confession;
         $confession -> confession = $req -> confession;
@@ -30,6 +38,17 @@ class publishconfess extends Controller
 
 }
 
+/* function test(){
+    $req;
+$contains = Str::contains($req, 'site');
+    if($contains==1){
+        return view('index');
+    }else
+    $req -> confession;
+
+}
+
+$req -> confession */
 
 /*
 Look on to twiiter developer

@@ -60,7 +60,7 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
         <div class="accordion-body">
-          We actually might post your concern on twitter (tzsocials) or instagram, and get your concern to get public opinion.<BR>
+          We actually might post your concern on twitter (socials) or instagram, and get your concern to get public opinion.<BR>
          YOU'LL ALWAYS STAY UNKNOWN TO US AND THE PUBLIC
         </div>
       </div>
@@ -81,7 +81,7 @@
 
 </div>
 <div class="text-center pt-3">
-<a href="https://twitter.com/tzsocials" class="btn btn-success" >Back to TZ_socials</a>
+<a href="https://twitter.com/tzsocials" class="btn btn-success" >Back to socials</a>
 </div>
 </div>
 

@@ -81,7 +81,7 @@
 
 </div>
 <div class="text-center pt-3">
-<a href="https://twitter.com/tzsocials" class="btn btn-success" >Back to socials</a>
+<a href="https://twitter.com/tzsocials" class="btn btn-success" >Back to    socials</a>
 </div>
 </div>
 

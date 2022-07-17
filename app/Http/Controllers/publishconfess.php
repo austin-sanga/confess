@@ -16,6 +16,7 @@ class publishconfess extends Controller
         ]);
 
         // this is to catch a bad phrase from a spammer and stop it
+        // this has to include the Str class of Illuminate
         $contains = Str::contains($req, 'https');
         if($contains==1){
             return view('index');
@@ -38,17 +39,7 @@ class publishconfess extends Controller
 
 }
 
-/* function test(){
-    $req;
-$contains = Str::contains($req, 'site');
-    if($contains==1){
-        return view('index');
-    }else
-    $req -> confession;
 
-}
-
-$req -> confession */
 
 /*
 Look on to twiiter developer

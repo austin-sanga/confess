@@ -37,6 +37,8 @@ use Atymic\Twitter\Facade\Twitter;
 // this is the route to the first hero page
 Route::view('/', 'index');
 
+Route::view('/confess', 'index');
+
 // route to the publishing controller,
 // the one that deals with insertion of data in the database
 Route::post('published',[publishconfess::class,'publish']);

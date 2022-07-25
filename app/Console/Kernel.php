@@ -17,7 +17,7 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')->hourly();
         $schedule->command('day:delete')
-        ->everyMinute();
+        ->daily();
     }
 
     /**

@@ -80,6 +80,17 @@ Route::get('media/{query}',[mediacontroller::class,'searchRecent']);
 //test controller route
 Route::get("test",[testcontroller::class,'test']);
 
+// communication test site.
+// Route::get("talk",[testcontroller::class,'talk']);
+Route::view('sema',"sema");
+Route::view('sema2',"sema2");
+
+Route::post('sema',[testcontroller::class,'semasave']);
+Route::post('sema2',[testcontroller::class,'semasave']);
+
+Route::get('sema',[testcontroller::class,'semaget']);
+Route::get('sema2',[testcontroller::class,'semaget']);
+
 
 
 

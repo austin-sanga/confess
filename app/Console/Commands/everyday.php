@@ -40,7 +40,9 @@ class everyday extends Command
     {
         // write what to do
         DB::table('talks')->delete();
-        
+
 
     }
 }
+
+// Making cron jobs bado

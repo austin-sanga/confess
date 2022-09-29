@@ -17,7 +17,7 @@ class publishconfess extends Controller
 
         // this is to catch a bad phrase from a spammer and stop it
         // this has to include the Str class of Illuminate
-        $contains = Str::contains($req, 'https');
+        $contains = Str::contains($req, 'http');
         if($contains==1){
             return view('index');
         }else

@@ -39,7 +39,7 @@ class everyday extends Command
     public function handle()
     {
         // write what to do
-        DB::table(['talks','confessions'])->delete();
+        DB::table(['confessions'])->delete();
 
 
     }
